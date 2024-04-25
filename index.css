@@ -38,6 +38,11 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky{
+    background: var(--bg-color);
 }
 
 .logo {
@@ -72,6 +77,7 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
+    margin-bottom: 10rem;
 }
 
 .home {
@@ -84,6 +90,7 @@ section {
 
 .home-content {
     max-width: 60rem;
+    
 }
 
 .home-content h1 {
@@ -101,11 +108,32 @@ section {
     font-size: 2.3rem;
     font-weight: 900;
     color: transparent;
-    -webkit-text-stroke: .8px var(--main-color);
+    -webkit-text-stroke: .5px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 1s;
+}
+
+.home-content .text-animate h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 3px solid var(--main-color);
+    z-index: -1;
+}
+
+.home-content span{
+    color: var(--text-color);
 }
 
 .home-content p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin: 2rem 0 4rem;
 }
 
@@ -343,22 +371,216 @@ span {
 
 
 
-
-.grid-container {
-    
+.skills-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
-    grid-gap: .8rem; /* Espaçamento entre os itens */
-  }
-  
-  .grid-item {
-    text-align: center; /* Centraliza o conteúdo */
-  }
-  
-  .grid-item img {
+    grid-gap: 10rem; /* Espaçamento entre os itens */
+    padding-top: 4%;
+}
+
+.skills-item {
+    text-align: center; /* Centraliza o conteúdo dentro de cada item */
+    transition: transform 0.4s ease; /* Suaviza a transformação */
+}
+
+.skills-item p{
+    font-size: 1.3rem;
+    color: var(--main-color);
+}
+
+.skills-item img {
     max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
-    max-height: 100px; /* Define a altura máxima da imagem */
+    max-height: 9rem; /* Define a altura máxima da imagem */
     width: auto; /* Permite que a largura seja ajustada automaticamente */
     height: auto; /* Mantém a proporção da imagem */
-  }
-  
+    transition: transform 0.8s ease; /* Adiciona uma transição suave ao transformar */
+}
+
+.skills-item:hover {
+    transform: scale(1.5); /* Aumenta o tamanho do item em 10% quando o mouse passa por cima */
+}
+
+.skills-item:hover img {
+    transform: translateY(-20px); /* Move a imagem 5px para cima ao passar o mouse */
+}
+
+
+/*contact*/
+
+.contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.contact form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder{
+    color: var(--text-color);
+}
+
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:var(--second-bg-color);
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus{
+    width: 100%;
+}
+
+.contact form .textarea-field{
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea{
+    resize: none;
+}
+
+.contact form .btn-box.btns .btn{
+    cursor: pointer;
+
+}
+
+
+/*BREAKPOINTS*/
+
+@media (max-width: 1200px){
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header {
+        padding: 2rem 4%;
+    }
+    section{
+        padding: 10rem 4% 2rem;
+    }
+
+    .home{padding: 0 4%;
+    }
+
+  /* QUANDO METER FOOTER
+   .footer {
+        padding: 2rem 4%;
+    }*/
+}
+
+@media (max-width: 768px){
+    .header {
+        background: var(--bg-color);
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--main-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1;
+        transition: .2s ease;
+        transition-delay: .2s;
+    }
+    .navbar.active{
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-nav{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .2rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar.active .active-nav{
+        left: 0;
+        transition-delay: .25s;
+    }
+
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        transform: translateX(0);
+        transition: .25s ease;
+        transition-delay: 0s;
+
+    }
+    .navbar .active a{
+        transform: translateX(-20rem);
+        transition-delay: .25s;
+    }
+
+   
+}
+
+/*KEYFRAMES ANIMATION*/
+@keyframes homeBgText {
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0;
+    }
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}

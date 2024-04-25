@@ -8,6 +8,18 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
      <!-- box icon--> 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: ("pqumY2eXRW1ANhohb"),
+      });
+   })();
+</script>
 </head>
 
 <body>
@@ -23,13 +35,15 @@
         <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
+
+        <span class="active-nav"></span>
     </nav>
 </header>
 
   <!-- home section!-->     
   <section class="home" id="home">
     <div class="home-content">
-        <h1>Hey, I'm <span>Pedro Gueirez</span></h1>
+        <h1>Hi, I'm <span>Pedro Gueirez</span></h1>
         <div class="text-animate">
             <h3>FULL STACK DEVELOPER</h3>
         </div>
@@ -123,15 +137,59 @@
     
   <section class="skills" id="skills">
     <h2 class="heading">My <span>Skills</span></h2>
-    <div class="grid-container">
-         <div class="grid-item"><img src="/resources/java.png" alt="Java"></div>
-        <div class="grid-item"><img src="/resources/script-java.png" alt="JavaScript"></div>
-         <div class="grid-item"><img src="/resources/servidor-sql (1).png" alt="Sql"></div>
-        <div class="grid-item"><img src="/resources/css-3.png" alt="Css"></div>
-        <div class="grid-item"><img src="/resources/html-5.png" alt="Html"></div>
-        <div class="grid-item"><img src="imagem6.jpg" alt="Imagem 6"></div>
+    <div class="skills-container">
+         <div class="skills-item"><img src="/resources/java.png" alt="Java"><p>Java</p></div>
+        <div class="skills-item"><img src="/resources/script-java.png" alt="JavaScript"><p>JavaScript</p></div>
+         <div class="skills-item"><img src="/resources/sql.png" alt="Sql"><p>Sql</p></div>
+        <div class="skills-item"><img src="/resources/css-3.png" alt="Css"><p>Css</p></div>
+        <div class="skills-item"><img src="/resources/html.png" alt="Html"><p>Html</p></div>
+        <div class="skills-item"><img src="/resources/bootstrap.png" alt="Bootstrap"><p>Bootstrap</p></div>
+        <div class="skills-item"><img src="/resources/react-2.svg" alt="React"><p>React</p></div>
+        <div class="skills-item"><img src="/resources/jquery-2.svg" alt="jQuery"><p>jQuery</p></div>
+        <div class="skills-item"><img src="/resources/spring-3.svg" alt="Spring"><p>Spring</p></div>
+        <div class="skills-item"><img src="/resources/hibernate.svg" alt="Hibernate"><p>hibernate</p></div>
+        <div class="skills-item"><img src="/resources/scrum-1.svg" alt="Scrum"><p>Scrum</p></div>
+        <div class="skills-item"><img src="/resources/maven.png" alt="Apache"><p>Apache</p></div>
+        <div class="skills-item"><img src="/resources/intellij-idea-1.svg" alt="InteliJ"><p>InteliJ</p></div>
+        <div class="skills-item"><img src="/resources/vim.svg" alt="vim"><p>Vim</p></div>
+        <div class="skills-item"><img src="/resources/git-icon.svg" alt="Git"><p>Git</p></div>
       </div>
   </section>
+
+
+ <!-- Contact section!-->  
+
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form id="contact-form">
+        <div class="input-box">
+            <div class="input-field">
+                <input type="text" placeholder="Name" id="name" required>
+                <span class="focus"></span>
+            </div>
+            <div class="input-field">
+                <input type="email" placeholder="Email" id="email" required>
+                <span class="focus"></span>
+            </div>
+        </div>
+        
+        <div class="textarea-field">
+            <textarea name="" id="message" cols="30" rows="15" placeholder="Your Message" required></textarea>
+            <span class="focus"></span>
+        </div>
+
+        <div class="btn-box btns">
+            <button type="submit" class="btn">Send Message</button>
+
+        </div>
+
+    </form>
+
+
+
+  </section>
+  
     
     <script src="/index.js"></script>
 </body>
