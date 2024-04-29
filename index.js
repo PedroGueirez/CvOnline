@@ -72,7 +72,7 @@ window.addEventListener('scroll', () => {
 //sticky header
 window.onscroll = () => {
     let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+    header.classList.toggle('sticky', window.scrollY > 500);
 
 
     //remove menu when click on item
