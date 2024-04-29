@@ -77,40 +77,37 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
-    margin-bottom: 10rem;
+    
 }
 
 .home {
     display: flex;
     align-items: center;
-    padding: 0 9%;
-    /*display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    padding: 0 9%;*/
-
+    padding: 0 10%;
+ 
 
 }
 
 .home-content {
-    max-width: 60rem;
+    max-width: 50rem;
+    margin-top: 5rem;
 
 }
 
 .home-content h1 {
-    font-size: 5.6rem;
+    font-size: 5rem;
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 
 .home-content .text-animate {
     position: relative;
-    width: 32.8rem;
+    width: 33.8rem;
 }
 
 .home-content .text-animate h3 {
-    font-size: 2.3rem;
-    font-weight: 900;
+    font-size: 2.1rem;
+    font-weight: 800;
     color: transparent;
     -webkit-text-stroke: .5px var(--main-color);
     background-image: linear-gradient(var(--main-color), var(--main-color));
@@ -137,7 +134,7 @@ section {
 }
 
 .home-content p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin: 2rem 0 4rem;
 }
 
@@ -199,11 +196,13 @@ section {
 
 
 .home-sci {
-    position: absolute;
-    bottom: 4rem;
-    width: 350px;
+    
+    width: 100%;
+    max-width: 35rem;
     display: flex;
     justify-content: space-between;
+    margin-top: 5rem;
+    padding: 0 .5rem;
 
 }
 
@@ -230,8 +229,8 @@ section {
 
 .imagem-wrapper img {
     position: relative;
-    width: 40px;
-    margin-right: 15px;
+    width: 3.5rem;
+    margin-right: 2rem;
 }
 
 .home-sci a::before {
@@ -254,13 +253,12 @@ section {
 
 
 .home-imgHover img {
-    width: 60%;
+    width: 50%;
     height: auto;
     display: block;
     border-radius: 50%;
-
-
-    margin-left: 13rem;
+    margin-top: auto;
+    margin-left: auto;
     margin-right: auto;
     transition: opacity 3s;
 }
@@ -286,7 +284,7 @@ span {
     flex-direction: column;
     min-height: auto;
     padding-bottom: 40rem;
-    padding-top: 30rem;
+    padding-top: 10rem;
 }
 
 .education .education-row {
@@ -395,14 +393,14 @@ span {
 }
 
 .skills-item p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--main-color);
 }
 
 .skills-item img {
     max-width: 100%;
     /* Garante que a imagem não ultrapasse o contêiner */
-    max-height: 9rem;
+    max-height: 7rem;
     /* Define a altura máxima da imagem */
     width: auto;
     /* Permite que a largura seja ajustada automaticamente */
@@ -440,7 +438,7 @@ span {
     /* Usa max-width para responsividade */
     width: 50rem;
     /* Mantém a largura desejada quando possível */
-    box-shadow: 0 1rem 2rem var(--main-color);
+    box-shadow: 0 1rem 1.1rem var(--main-color);
     border: 1.5rem solid var(--second-bg-color);
     border-radius: 5%;
     overflow: hidden;
@@ -450,7 +448,7 @@ span {
 
 .card-img-top {
     width: 100%;
-    height: 30rem;
+    height: 20rem;
     /* Mantém a altura fixa conforme original */
     object-fit: cover;
     display: block;
@@ -459,14 +457,14 @@ span {
 .card-title {
     margin-top: 1.2rem;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.3rem;
     /* Mantém o tamanho original */
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 .card-type {
-    color: var(--main-color);
-    font-size: 1.8rem;
+    color: var(--text-color);
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -475,27 +473,17 @@ span {
     margin-bottom: 1rem;
     margin-left: .5rem;
     margin-right: .5rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
     line-height: 1.2;
     text-align: center;
 }
 
 .card:hover {
-    transform: scale(1.2) translateY(10%);
+    transform: scale(1.1) translateY(10%);
     /* Efeito de hover mantido */
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
     /* Sombra ao passar o mouse */
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -581,7 +569,7 @@ span {
 
 /*BREAKPOINTS*/
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     html {
         font-size: 55%;
     }
@@ -600,7 +588,7 @@ span {
         padding: 0 4%;
     }
 
-}
+} */
 
 @media (max-width: 768px) {
     .header {
@@ -666,7 +654,7 @@ span {
 
 }
 
-
+/* 
 @media (max-width: 520px) {
     html {
         font-size: 50%;
@@ -716,7 +704,7 @@ span {
 
     }
 
-}
+} */
 
 /*KEYFRAMES ANIMATION*/
 @keyframes homeBgText {
