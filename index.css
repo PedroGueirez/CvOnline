@@ -77,14 +77,15 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
-    
+
 }
 
 .home {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 0 10%;
- 
+
 
 }
 
@@ -196,7 +197,7 @@ section {
 
 
 .home-sci {
-    
+
     width: 100%;
     max-width: 35rem;
     display: flex;
@@ -253,7 +254,7 @@ section {
 
 
 .home-imgHover img {
-    width: 50%;
+    width: 60%;
     height: auto;
     display: block;
     border-radius: 50%;
