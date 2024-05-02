@@ -10,7 +10,7 @@
 }
 
 :root {
-    --bg-color: #081b29;
+    --bg-color: #081b29; /* linear-gradient(130deg, #081b29,#363636); */
     --second-bg-color: #112e42;
     --text-color: #ededed;
     --main-color: #00abf0;
